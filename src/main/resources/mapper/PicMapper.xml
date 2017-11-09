@@ -6,6 +6,6 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="pic_url" jdbcType="VARCHAR" property="picUrl" />
   </resultMap>
 </mapper>

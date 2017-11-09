@@ -7,7 +7,8 @@ public class Pic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String site;
+    @Column(name = "pic_url")
+    private String picUrl;
 
     /**
      * @return id
@@ -24,16 +25,16 @@ public class Pic {
     }
 
     /**
-     * @return site
+     * @return pic_url
      */
-    public String getSite() {
-        return site;
+    public String getPicUrl() {
+        return picUrl;
     }
 
     /**
-     * @param site
+     * @param picUrl
      */
-    public void setSite(String site) {
-        this.site = site;
+    public void setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
     }
 }

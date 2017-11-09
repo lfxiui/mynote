@@ -1,19 +1,60 @@
--- --------------------------------------------------------
--- 主机:                           127.0.0.1
--- 服务器版本:                        5.7.17-log - MySQL Community Server (GPL)
--- 服务器操作系统:                      Win64
--- HeidiSQL 版本:                  9.4.0.5125
--- --------------------------------------------------------
+/*
+Navicat MySQL Data Transfer
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+Source Server         : localhost_3306
+Source Server Version : 50712
+Source Host           : localhost:3306
+Source Database       : mynote
 
--- 数据导出被取消选择。
--- 数据导出被取消选择。
--- 数据导出被取消选择。
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+Target Server Type    : MYSQL
+Target Server Version : 50712
+File Encoding         : 65001
+
+Date: 2017-11-09 22:32:15
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `note`
+-- ----------------------------
+DROP TABLE IF EXISTS `note`;
+CREATE TABLE `note` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `text` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of note
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `note_pic`
+-- ----------------------------
+DROP TABLE IF EXISTS `note_pic`;
+CREATE TABLE `note_pic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `note_id` int(11) NOT NULL,
+  `pic_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of note_pic
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `pic`
+-- ----------------------------
+DROP TABLE IF EXISTS `pic`;
+CREATE TABLE `pic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_url` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of pic
+-- ----------------------------
