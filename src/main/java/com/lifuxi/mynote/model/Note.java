@@ -1,13 +1,20 @@
 package com.lifuxi.mynote.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 import javax.persistence.*;
 
-public class Note {
+public class Note{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String title;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date date;
 
     private String text;
 
@@ -37,6 +44,20 @@ public class Note {
      */
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    /**
+     * @return date
+     */
+    public Date getDate() {
+        return date;
+    }
+
+    /**
+     * @param date
+     */
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     /**

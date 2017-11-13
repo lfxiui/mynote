@@ -7,6 +7,7 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="date" jdbcType="DATE" property="date" />
     <result column="text" jdbcType="LONGVARCHAR" property="text" />
   </resultMap>
 </mapper>

@@ -2,7 +2,7 @@ package com.lifuxi.mynote.model;
 
 import javax.persistence.*;
 
-public class Pic {
+public class Pic{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

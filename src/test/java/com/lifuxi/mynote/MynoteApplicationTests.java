@@ -13,8 +13,7 @@ public class MynoteApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		NoteService noteService = new NoteService();
-		System.out.println(noteService.getNoteTitles().size());
+
 	}
 
 }

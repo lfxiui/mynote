@@ -64,7 +64,18 @@
 			<!-- 建议使用最新版本,最新版本请从项目首页查找 -->
 			<version>1.1.4</version>
 		</dependency>
-		<!--generator-->
+		<!--pagehelper-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		<!--nekohtml可以修正thymeleaf提示的许多错误,不用thymeleaf可以去掉-->
+		<dependency>
+			<groupId>nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.6.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
