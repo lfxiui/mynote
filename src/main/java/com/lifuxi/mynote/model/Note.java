@@ -13,7 +13,7 @@ public class Note{
 
     private String title;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")//解决时区问题，没有timezone会少一天
     private Date date;
 
     private String text;

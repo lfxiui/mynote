@@ -26,8 +26,9 @@ public class NoteService {
         return noteMapper.selectAll();
     }
     public void addNote(Note note){
-        System.out.println(note.getTitle());
-        System.out.println(note.getText());
         noteMapper.insert(note);
+    }
+    public void deleteNote(Note note){
+        noteMapper.delete(note);
     }
 }

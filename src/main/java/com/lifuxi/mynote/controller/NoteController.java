@@ -33,10 +33,32 @@ public class NoteController {
     @RequestMapping(value="/addNote",method = RequestMethod.POST)
     @ResponseBody
     public Map addNote(@RequestBody Note note){
-        note.setDate(new Date());
-        noteService.addNote(note);
-        Map map = new HashMap();
-        map.put("data","success");
+        Map map = null;
+        try {
+            note.setDate(new Date());
+            noteService.addNote(note);
+            map = new HashMap();
+            map.put("data","success");
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("data","提交失败");
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/deleteNote",method = RequestMethod.POST)
+    @ResponseBody
+    public Map deleteNote(@RequestBody Note note){
+        Map map = null;
+        try {
+            noteService.deleteNote(note);
+            map = new HashMap();
+            map.put("message","success");
+            map.put("data",noteService.getAllNotes());
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("message","删除失败！");
+        }
         return map;
     }
 }
