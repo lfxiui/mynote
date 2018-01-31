@@ -21,11 +21,11 @@
 
         <javaModelGenerator targetPackage="com.lifuxi.mynote.model" targetProject="src\main\java"/>
 
-        <sqlMapGenerator targetPackage="mapper"  targetProject="src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="src\main\resources"/>
 
-        <javaClientGenerator targetPackage="com.lifuxi.mynote.mapper" targetProject="src\main\java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.lifuxi.mynote.mapper" targetProject="src\main\java" type="XMLMAPPER"/>
 
-        <table tableName="%" >
+        <table tableName="%">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>

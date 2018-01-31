@@ -1,4 +1,4 @@
-package com.lifuxi.mynote.pattern.factory;
+package com.lifuxi.mynote.pattern.abstractfactory;
 
 /**
  * 步骤2：创建实现接口的实体类

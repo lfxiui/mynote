@@ -3,7 +3,7 @@ package com.lifuxi.mynote.model;
 import javax.persistence.*;
 
 @Table(name = "note_pic")
-public class NotePic{
+public class NotePic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

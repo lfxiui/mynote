@@ -1,8 +1,11 @@
 package com.lifuxi.mynote.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Pic{
+public class Pic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

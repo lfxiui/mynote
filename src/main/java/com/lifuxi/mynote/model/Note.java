@@ -3,17 +3,19 @@ package com.lifuxi.mynote.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
-public class Note{
+public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String title;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(pattern = "yyyy-MM-dd",timezone="GMT+8")//解决时区问题，没有timezone会少一天
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")//解决时区问题，没有timezone会少一天
     private Date date;
 
     private String text;

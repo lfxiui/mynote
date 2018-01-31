@@ -15,21 +15,24 @@ import java.util.List;
 public class NoteService {
     @Autowired
     private NoteMapper noteMapper;
-    public List<Note> getAllNotes(){
-        PageHelper.startPage(2,2);
+
+    public List<Note> getAllNotes() {
+        PageHelper.startPage(2, 2);
         List list = noteMapper.selectAll();
         PageInfo<Note> notePageInfo = new PageInfo<Note>(list);
         System.out.println(notePageInfo.getPages());//页数
         //获取列表
-        for (Note note:notePageInfo.getList()) {
+        for (Note note : notePageInfo.getList()) {
             System.out.println(note.getTitle());
         }
         return noteMapper.selectAll();
     }
-    public void addNote(Note note){
+
+    public void addNote(Note note) {
         noteMapper.insert(note);
     }
-    public void deleteNote(Note note){
+
+    public void deleteNote(Note note) {
         noteMapper.delete(note);
     }
 }
